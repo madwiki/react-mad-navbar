@@ -1,0 +1,49 @@
+$sm-width:527px;
+$md-width:970px;
+$lg-width:1170px;
+
+.home{
+  width: 100%;
+  background-color: #fff;
+  &:after{
+    content: "";
+    display: block;
+    height: 1px;
+  }
+  // .cover{
+  //   display: block;
+  //   background-image: url(../images/sea.jpg);
+  //   background-size: cover;
+  //   background-position: center;
+  // }
+  .content{
+    display: block;
+    margin: 60px auto;
+    color: #667;
+    width: 90%;
+    @media screen and (min-width:$md-width) {
+      width: 520px;
+    }
+    @media screen and (min-width:$lg-width) {
+      width: 625px;
+    }
+    &:before{
+      content: "";
+      display: block;
+      height: 1px;
+    }
+    .title{
+      text-align: center;
+      margin: 70px auto;
+      h1{
+        font-size: 30px;
+      }
+    }
+    article{
+      line-height: 30px;
+      p{
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

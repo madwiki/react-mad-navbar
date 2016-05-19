@@ -1,0 +1,113 @@
+.nav-wrapper{
+  width: 100%;
+  a{
+    text-decoration: none;
+  }
+  .cover-wrapper{
+    position:relative;
+    width: 100%;
+    overflow: hidden;
+    .cover{
+      display: block;
+      background-size: cover;
+      width: 120%;
+      height: 120%;
+      background-position: center;
+    }
+    .mask{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+      top: 0px;
+      left: 0px;
+      transition: opacity linear 0.4s;
+    }
+  }
+  .navigation{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    color: #333;
+    width: 100%;
+    .menu-btn{
+      position: absolute;
+      z-index: 100;
+      left: 10px;
+      top: 10px;
+      display: inline-block;
+      cursor: pointer;
+      height: 100%;
+    }
+    .menu-box{
+      height: 100%;
+      .menu{
+        display: block;
+        .link-wrapper{
+          display: block;
+          margin: 0 20px;
+          .link{
+            display: block;
+          }
+        }
+      }
+    }
+    .menu-btn-spread{
+      display: none;
+    }
+    .menu-box-spread{
+      .menu{
+        display: block;
+        position: relative;
+        color: #333;
+        padding-left: 10%;
+        padding-right: 10%;
+        .link-wrapper-left{
+          float: left;
+        }
+        .link-wrapper-right{
+          float: right;
+        }
+        &:after{
+          content: "";
+          display: block;
+
+          clear: both;
+        }
+      }
+    }
+    .menu-box-collapse{
+      display: block;
+      background-color: rgb(255,255,255);
+      .menu{
+        width: 100%;
+        vertical-align: middle;
+        display: inline-block;
+        .link-wrapper{
+          display: block;
+          text-align: center;
+          .link{
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .nav-enter {
+      opacity: 0.01;
+    }
+
+    .nav-enter.nav-enter-active {
+      opacity: 1;
+      transition: opacity 500ms ease-in;
+    }
+
+    .nav-leave {
+      opacity: 1;
+    }
+
+    .nav-leave.nav-leave-active {
+      opacity: 0.01;
+      transition: opacity 300ms ease-in;
+    }
+  }
+}
